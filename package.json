@@ -1,0 +1,12 @@
+{
+  "name": "folders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm install && node server.js & cd client && npm install && npm run dev",    "build": "cd client && npm install && npm run build" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
