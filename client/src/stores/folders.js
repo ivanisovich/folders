@@ -74,7 +74,7 @@ export const useFolderStore = defineStore("folder", {
     async login({ username, password }) {
       try {
         const response = await axios.post(
-          "https://91.223.123.165:3000/api/login",
+          "http://91.223.123.165:3000/api/login",
           {
             username: username,
             password: password,
@@ -107,7 +107,7 @@ export const useFolderStore = defineStore("folder", {
           const headers = token ? { Authorization: `Bearer ${token}` } : {}; // Создание заголовка, если токен существует
 
           const response = await axios.get(
-            `https://91.223.123.165:3000/folders?path=${encodeURIComponent(
+            `http://91.223.123.165:3000/folders?path=${encodeURIComponent(
               this.currentPath
             )}`,
             { headers }
@@ -153,7 +153,7 @@ export const useFolderStore = defineStore("folder", {
       console.log(folderPath);
       this.downloadingStatuses[folderPath] = true;
 
-      const url = `https://91.223.123.165:3000/download?path=${encodeURIComponent(
+      const url = `http://91.223.123.165:3000/download?path=${encodeURIComponent(
         `/var/www/${folderPath}`
       )}`;
       axios
