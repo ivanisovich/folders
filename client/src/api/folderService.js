@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'https://folders-ws.vercel.app/folders';
+const baseUrl = 'http://91.223.123.165:3000/folders';
 
 export const fetchFolders = async () => {
   try {
